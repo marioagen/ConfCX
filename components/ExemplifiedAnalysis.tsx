@@ -166,22 +166,17 @@ const ExemplifiedAnalysis: React.FC = () => {
                     <div className="px-4 pb-4 pt-4 space-y-4">
                         {/* Question Accordion */}
                         <div className="border border-gray-200 rounded-md overflow-hidden">
-                            <button 
-                                onClick={() => setCurrentSectionOpen(!currentSectionOpen)}
-                                className="w-full flex justify-between items-center bg-[#fffcf5] px-4 py-3 hover:bg-[#fff8e6] transition-colors border-b border-gray-200"
-                            >
+                            <div className="w-full flex justify-between items-center bg-[#fffcf5] px-4 py-3 border-b border-gray-200">
                                 <div className="flex items-center space-x-2">
                                     <ExclamationTriangleIcon className="h-5 w-5 text-orange-500" />
                                     <span className="font-medium text-[12px] text-[#8c5a15] uppercase">78 - EXISTÊNCIA DO FINANCIAMENTO - Imóvel Comercial</span>
                                 </div>
                                 <div className="flex items-center space-x-3">
                                     <span className="bg-red-100 text-[#d32f2f] text-xs font-bold px-2 py-1 rounded">NÃO APROVADO</span>
-                                    {currentSectionOpen ? <ChevronUpIcon className="h-4 w-4 text-gray-500" /> : <ChevronDownIcon className="h-4 w-4 text-gray-500" />}
                                 </div>
-                            </button>
+                            </div>
 
-                            {currentSectionOpen && (
-                                <div className="p-4 bg-white space-y-4">
+                            <div className="p-4 bg-white space-y-4">
                                     {/* Camada de Controle */}
                                     <div className="bg-[#f5f5f5] border border-gray-200 rounded-md p-4">
                                         <div className="flex items-center space-x-2 mb-2">
@@ -235,7 +230,6 @@ const ExemplifiedAnalysis: React.FC = () => {
                                         </div>
                                     </div>
                                 </div>
-                            )}
                         </div>
                     </div>
                 </div>
