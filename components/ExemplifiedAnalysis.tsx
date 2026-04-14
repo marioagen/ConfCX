@@ -172,7 +172,7 @@ const ExemplifiedAnalysis: React.FC = () => {
                             >
                                 <div className="flex items-center space-x-2">
                                     <ExclamationTriangleIcon className="h-5 w-5 text-orange-500" />
-                                    <span className="font-medium text-sm text-[#8c5a15] uppercase">78 - EXISTÊNCIA DO FINANCIAMENTO - Imóvel Comercial</span>
+                                    <span className="font-medium text-[12px] text-[#8c5a15] uppercase">78 - EXISTÊNCIA DO FINANCIAMENTO - Imóvel Comercial</span>
                                 </div>
                                 <div className="flex items-center space-x-3">
                                     <span className="bg-red-100 text-[#d32f2f] text-xs font-bold px-2 py-1 rounded">NÃO APROVADO</span>
@@ -183,10 +183,10 @@ const ExemplifiedAnalysis: React.FC = () => {
                             {currentSectionOpen && (
                                 <div className="p-4 bg-white space-y-4">
                                     {/* Camada de Controle */}
-                                    <div className="bg-[#f8fbff] border border-blue-100 rounded-md p-4">
+                                    <div className="bg-[#f5f5f5] border border-gray-200 rounded-md p-4">
                                         <div className="flex items-center space-x-2 mb-2">
-                                            <ShieldCheckIcon className="h-4 w-4 text-[#005c9e]" />
-                                            <span className="text-xs font-bold text-[#005c9e] uppercase tracking-wider">Camada de Controle</span>
+                                            <ShieldCheckIcon className="h-4 w-4 text-[#606060]" />
+                                            <span className="text-xs font-bold text-[#606060] uppercase tracking-wider">Camada de Controle</span>
                                         </div>
                                         <p className="text-sm text-gray-600">
                                             Verificar se o imóvel comercial possui registro de financiamento ativo conforme normas vigentes.
@@ -199,20 +199,20 @@ const ExemplifiedAnalysis: React.FC = () => {
                                             <UserIcon className="h-4 w-4 text-[#005c9e]" />
                                             <span className="text-xs font-bold text-[#005c9e] uppercase tracking-wider">Justificativa do Analista</span>
                                         </div>
-                                        <p className="text-sm text-gray-600 italic">
+                                        <p className="text-sm text-[#005c9e] italic">
                                             "O analista identificou que o registro está pendente de atualização no sistema central, impossibilitando a validação imediata."
                                         </p>
                                     </div>
 
                                     {/* Action Buttons */}
                                     <div className="flex space-x-3">
-                                        <button className="flex-1 flex items-center justify-center space-x-2 bg-[#f0f4f8] hover:bg-[#e2e8f0] text-[#334155] py-2 rounded-md font-medium transition-colors">
+                                        <button className="flex-1 flex items-center justify-center space-x-2 bg-[#f0f4f8] hover:bg-[#e2e8f0] text-[#334155] py-2 rounded-md font-medium text-sm transition-colors">
                                             <span>Aceito</span>
-                                            <CheckCircleIcon className="h-5 w-5" />
+                                            <CheckCircleIcon className="h-4 w-4" />
                                         </button>
-                                        <button className="flex-1 flex items-center justify-center space-x-2 bg-[#e11d48] hover:bg-[#be123c] text-white py-2 rounded-md font-medium transition-colors">
+                                        <button className="flex-1 flex items-center justify-center space-x-2 bg-[#ffffff] border border-[#D72525] hover:bg-red-50 text-[#D72525] py-2 rounded-md font-medium text-sm transition-colors">
                                             <span>Não Aprovado</span>
-                                            <XCircleIcon className="h-5 w-5" />
+                                            <XCircleIcon className="h-4 w-4 text-[#D72525]" />
                                         </button>
                                     </div>
 
@@ -223,18 +223,16 @@ const ExemplifiedAnalysis: React.FC = () => {
                                             <span className="text-xs font-bold text-[#e11d48] uppercase tracking-wider">Parecer do Supervisor</span>
                                         </div>
                                         <textarea 
-                                            className="w-full bg-white border border-gray-200 rounded-md p-3 text-sm text-gray-800 focus:outline-none focus:ring-1 focus:ring-red-300 resize-none"
+                                            className="w-full bg-white border border-gray-200 rounded-md p-3 text-sm text-gray-800 focus:outline-none focus:ring-1 focus:ring-red-300 resize-none mb-3"
                                             rows={3}
                                             defaultValue="Não aprovado"
                                         ></textarea>
-                                    </div>
-
-                                    {/* Salvar Item Button */}
-                                    <div className="flex justify-end pt-2">
-                                        <button className="flex items-center space-x-2 bg-[#1e293b] hover:bg-[#0f172a] text-white px-4 py-2 rounded-md font-medium transition-colors">
-                                            <span>Salvar Item</span>
-                                            <DocumentCheckIcon className="h-5 w-5" />
-                                        </button>
+                                        <div className="flex justify-end">
+                                            <button className="flex items-center space-x-2 bg-[#3B485A] hover:bg-[#2c3644] text-white px-4 py-2 rounded-md font-medium text-sm transition-colors">
+                                                <span>Incluir comentário</span>
+                                                <DocumentCheckIcon className="h-4 w-4" />
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             )}
