@@ -67,15 +67,15 @@ const Header: React.FC<HeaderProps> = ({ onPageChange, userProfile, onToggleProf
   ];
 
   return (
-    <header className="bg-[#005c9e] text-white flex items-center justify-between p-3 shadow-md relative z-10">
+    <header className="bg-[#005c9e] text-white flex items-center justify-between p-3 shadow-md relative z-50">
       <div className="flex items-center">
         <button className="p-2 relative" onClick={handleMenuClick} aria-label="Open menu">
           <MenuIcon className="h-6 w-6" />
         </button>
         {isMenuOpen && (
           <>
-            <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={() => setIsMenuOpen(false)}></div>
-            <div className="fixed top-0 left-0 h-full w-72 bg-white shadow-xl z-50 overflow-y-auto flex flex-col animate-fade-in">
+            <div className="fixed inset-0 bg-black bg-opacity-50 z-[9998]" onClick={() => setIsMenuOpen(false)}></div>
+            <div className="fixed top-0 left-0 h-full w-72 bg-white shadow-xl z-[9999] overflow-y-auto flex flex-col animate-fade-in">
               <div className="p-4 flex justify-between items-center border-b border-gray-100">
                 <span className="font-bold text-[#005c9e] text-lg">Menu</span>
                 <button onClick={() => setIsMenuOpen(false)} className="text-gray-500 hover:text-gray-800">
