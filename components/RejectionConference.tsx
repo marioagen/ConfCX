@@ -122,14 +122,17 @@ const RejectionConference: React.FC<RejectionConferenceProps> = ({ onNavigate })
     <div className="bg-white rounded-lg shadow p-4 sm:p-6 animate-fade-in">
       <h3 className="text-lg font-medium text-gray-700 mb-4">Conferência Rej. de Apontamentos</h3>
       
-      <div className="relative col-span-full mb-4">
-          <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-              <SearchIcon className="h-5 w-5 text-gray-400"/>
+      <div className="flex items-center space-x-2 mb-4">
+          <div className="relative w-64 md:w-80">
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                  <SearchIcon className="h-5 w-5 text-gray-400"/>
+              </div>
+              <input type="text" placeholder="Buscar..." className="w-full p-2 pl-10 border border-gray-300 rounded-md bg-gray-50 focus:bg-white text-gray-800 placeholder-gray-500 focus:ring-1 focus:ring-[#005c9e] outline-none transition-colors"/>
           </div>
-          <input type="text" placeholder="Buscar..." className="w-full p-2 pl-10 border border-gray-300 rounded-md bg-gray-50 focus:bg-white text-gray-800 placeholder-gray-500 focus:ring-1 focus:ring-[#005c9e] outline-none transition-colors"/>
+          <ActionButton icon={<SearchIcon className="h-5 w-5" />} color="blue" />
       </div>
       
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex items-center mb-6">
           <div className="flex items-center space-x-2">
               <button onClick={() => setIsFiltersExpanded(!isFiltersExpanded)} className="flex items-center space-x-2 text-sm font-medium text-[#005c9e] hover:bg-blue-50 px-3 py-1.5 rounded-md transition-colors">
                   <FilterIcon className="h-4 w-4" />
@@ -141,9 +144,6 @@ const RejectionConference: React.FC<RejectionConferenceProps> = ({ onNavigate })
                       <span className="font-semibold">{activeFilterCount}</span> {activeFilterCount === 1 ? 'filtro aplicado' : 'filtros aplicados'}
                   </div>
               )}
-          </div>
-          <div className="flex items-end space-x-2">
-              <ActionButton icon={<SearchIcon className="h-5 w-5" />} color="blue" />
           </div>
       </div>
 
